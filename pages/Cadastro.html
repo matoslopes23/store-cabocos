@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  </head>
+  <body class="contato">
+    <div id="area-cabecalho">
+      <div id="area-logo">
+        <h1>Cabocos<span class="branco">Store</span></h1>
+      </div>
+      <div id="area-menu">
+        <a id="home" href="Home.html">Home</a>
+        <a id="product" href="Products.html">Produtos</a>
+        <a id="cadastro" href="Cadastro.html">Cadastro</a>
+        <a id="contatos" href="Contato.html">Contato</a>
+      </div>
+    </div>
+    <section class="content">
+      <div id="contato">
+        <h3>Formulario de cadastro</h3>
+        <form class="forme" methode="POST" action="">
+          <input
+            class="field"
+            type="text"
+            name="nome"
+            id="txtName"
+            placeholder="Nome"
+          />
+
+          <input
+            class="field"
+            type="text"
+            name="email"
+            id="txtEmail"
+            placeholder="E-mail"
+          />
+          <input
+            class="field"
+            type="text"
+            name="phone"
+            id="txtPhone"
+            placeholder="Telefone"
+          /><input
+            class="field"
+            type="text"
+            name="endereco"
+            id="txtEndereco"
+            placeholder="Endereço"
+          /><input
+            class="field"
+            type="text"
+            name="DataNasc"
+            id="txtData"
+            placeholder="Data de Nascimento"
+          />
+          <input class="field" type="text" name="Sexo" placeholder="Sexo" />
+          <input class="field" type="text" name="cpf" placeholder="CPF" />
+
+          <button
+            class="button"
+            type="submit"
+            value="Enviar"
+            onclick="salvarDados()"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="../src/sessionStorage.js"></script>
+  </body>
+</html>
