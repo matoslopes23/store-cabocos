@@ -6,12 +6,12 @@ request.onupgradeneeded = function () {
     autoIncrement: true,
   });
   store.createIndex("Nome", "Nome", { unique: true });
-  store.createIndex("Email", "Email");
-  store.createIndex("Telefone", "Telefone");
-  store.createIndex("Endereco", "Endereco");
-  store.createIndex("Data_Nasc", "Data_Nasc");
-  store.createIndex("Sexo", "Sexo");
-  store.createIndex("CPF", "CPF");
+  store.createIndex("Email", "Email", { unique: false });
+  store.createIndex("Telefone", "Telefone", { unique: false });
+  store.createIndex("Endereco", "Endereco", { unique: false });
+  store.createIndex("Data_Nasc", "Data_Nasc", { unique: false });
+  store.createIndex("Sexo", "Sexo", { unique: false });
+  store.createIndex("CPF", "CPF", { unique: false });
 };
 
 request.onsuccess = function () {
