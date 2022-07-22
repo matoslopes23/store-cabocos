@@ -20,7 +20,7 @@
     <section class="content">
       <div id="contato">
         <h3>Formulario de cadastro</h3>
-        <form class="forme" methode="POST" action="">
+        <form class="forme" id="form_data" name="form_data">
           <input
             class="field"
             type="text"
@@ -31,7 +31,7 @@
 
           <input
             class="field"
-            type="text"
+            type="email"
             name="email"
             id="txtEmail"
             placeholder="E-mail"
@@ -55,15 +55,22 @@
             id="txtData"
             placeholder="Data de Nascimento"
           />
-          <input class="field" type="text" name="Sexo" placeholder="Sexo" />
-          <input class="field" type="text" name="cpf" placeholder="CPF" />
+          <input
+            class="field"
+            type="text"
+            name="Sexo"
+            id="textSexo"
+            placeholder="Sexo"
+          />
+          <input
+            class="field"
+            type="text"
+            name="cpf"
+            id="textCpf"
+            placeholder="CPF"
+          />
 
-          <button
-            class="button"
-            type="submit"
-            value="Enviar"
-            onclick="salvarDados()"
-          >
+          <button class="button" type="submit" value="Enviar" id="send">
             Enviar
           </button>
         </form>

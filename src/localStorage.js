@@ -1,3 +1,13 @@
+var x = document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="O seu navegador não suporta Geolocalização.";}
+  }
+
 function adicionar() {
   localStorage.setItem(
     "Contato",
@@ -6,9 +16,14 @@ function adicionar() {
       email: txtEmail.value,
       telefone: txtPhone.value,
       mensagem: txtMessage,
+      latitude:
     })
   );
   alert("Item adicionado.");
-  // txName.value = txtEmail.value = "";
-  //   alert("Cadastro realizado com sucesso");
 }
+function showPosition(position){
+  x.innerHTML="Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude; 
+}
+
+
