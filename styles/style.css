@@ -69,7 +69,7 @@ a:hover {
   background-position: right bottom;
 }
 body.home #area-menu a#home,
-body.product #area-menu a#product,
+body.produtos #area-menu a#produtos,
 body.cadastro #area-menu a#cadastro,
 body.contato #area-menu a#contato {
   color: #161615;
