@@ -1,14 +1,11 @@
-var x = document.getElementById("demo");
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  else{x.innerHTML="O seu navegador não suporta Geolocalização.";}
-  }
+// var x = document.getElementById("demo");
 
 function adicionar() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("O seu navegador não suporta Geolocalização.");
+  }
   localStorage.setItem(
     "Contato",
     JSON.stringify({
@@ -16,14 +13,17 @@ function adicionar() {
       email: txtEmail.value,
       telefone: txtPhone.value,
       mensagem: txtMessage,
-      latitude:
     })
   );
   alert("Item adicionado.");
 }
-function showPosition(position){
-  x.innerHTML="Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude; 
+function showPosition(position) {
+  alert("lat" + position.coords.latitude);
+  localStorage.setItem(
+    "Geo",
+    JSON.stringify({
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    })
+  );
 }
-
-
